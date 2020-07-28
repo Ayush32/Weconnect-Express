@@ -7,7 +7,9 @@
  const app = express()
  const port = 8000
 
-
+// use express router
+app.use('/', require('./routes/index'))
+console.log('router loaded')
 
 
  app.listen(port, function(err){
