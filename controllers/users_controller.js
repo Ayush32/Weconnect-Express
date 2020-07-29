@@ -1,3 +1,7 @@
+/*
+ *   Copyright (c) 2020
+ *   All rights reserved.
+ */
 const { model } = require("../models/user");
 
 /*
@@ -21,4 +25,14 @@ module.exports.signIn = function (req, res) {
   return res.render("user_Sign-in", {
     titleName: "WeConnect | Sign In",
   });
+};
+
+// get the sign data
+
+module.exports.create = function (req, res) {
+  // TODO
+};
+
+module.exports.createSession = function (req, res) {
+  // TODO
 };
