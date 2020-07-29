@@ -4,6 +4,6 @@
  */
 module.exports.home = function (req, res) {
   return res.render("home", {
-    titleName: "Weconnect Home",
+    titleName: "Hiveconnect Home",
   });
 };

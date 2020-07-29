@@ -4,7 +4,7 @@
  */
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/weconnect_express_development");
+mongoose.connect("mongodb://localhost/hiveconnect_development");
 
 const db = mongoose.connection;
 
