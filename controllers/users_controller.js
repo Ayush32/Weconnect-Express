@@ -91,3 +91,9 @@ module.exports.createSession = function (req, res) {
     // handle user
   });
 };
+
+module.exports.destroySession = function (req, res) {
+  if (user) {
+    return res.redirect("/");
+  }
+};
