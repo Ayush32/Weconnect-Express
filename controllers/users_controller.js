@@ -17,12 +17,18 @@ module.exports.profile = function (rex, res) {
 
 // render signup page
 module.exports.signUp = function (req, res) {
+  if (req.isAuthenticated()) {
+    return res.redirect("/users/profile");
+  }
   return res.render("user_sign_up", {
     titleName: "HiveConnect | Sign Up",
   });
 };
 // render signIn page
 module.exports.signIn = function (req, res) {
+  if (req.isAuthenticated()) {
+    return res.redirect("/users/profile");
+  }
   return res.render("user_Sign-in", {
     titleName: "HiveConnect | Sign In",
   });
