@@ -42,7 +42,7 @@ app.set("layout extractStyles", true);
 app.set("layout extractScripts", true);
 
 // use express router
-app.use("/", require("./routes/index"));
+app.use("/", require("./routes"));
 // setup the view engine
 app.set("view engine", "ejs");
 app.set("views", "./views");
