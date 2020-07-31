@@ -1,22 +1,22 @@
-footer{
+footer {
 
-display: flex;
-// flex-direction: row;
-justify-content: center;
-align-items: center;
-position: relative;
-    
-       #particles-js {
-           width: 100% !important;
-           height: 40vh;
-           background-color: #923cb5;
-           background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%);
-        
-           background-size: cover;
-     
-       }
+    display: flex;
+    // flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 
-    .footer-container{
+    #particles-js {
+        width: 100% !important;
+        height: 36vh;
+        background-color: #923cb5;
+        background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%);
+
+        background-size: cover;
+
+    }
+
+    .footer-container {
         display: flex;
         justify-content: center;
         align-self: center;
@@ -25,58 +25,61 @@ position: relative;
         // text-align: center;
         position: absolute;
     }
-    .footer-heading h2{
+
+    .footer-heading h2 {
         margin-top: 4.2rem;
         color: white;
         font-size: 30px;
         letter-spacing: 4px;
     }
 
-    ul li{
+    ul li {
         list-style-type: none;
     }
 
-    .list-heading{
+    .list-heading {
         color: white;
     }
-    .list-item li a{
-        color:rgb(255, 247, 0);
+
+    .list-item li a {
+        color: rgb(255, 247, 0);
         transition: all ease-in-out 0.1s;
         text-decoration: none;
     }
-    .list-item li a:hover{
+
+    .list-item li a:hover {
         color: rgb(255, 208, 0);
-        
-    }
- 
 
-    .copyright{
-       display: flex;
-       justify-content: center!important;
-       align-self: center;
-       margin-top: 12rem;
-       position: absolute;
-    }
-    .copyright .copy{
-    font-size: 14px!important;
-    color: #8b8b8b;
-    text-align: center;
-    // position: fixed;
     }
 
-    .copy:hover{
+
+    .copyright {
+        display: flex;
+        justify-content: center !important;
+        align-self: center;
+        margin-top: 12rem;
+        position: absolute;
+    }
+
+    .copyright .copy {
+        font-size: 14px !important;
+        color: #8b8b8b;
+        text-align: center;
+        // position: fixed;
+    }
+
+    .copy:hover {
         color: white;
         opacity: 0.4;
     }
 
-    
+
 }
 
-@media screen and (max-width:576px){
-    .footer-heading h2{
-        font-size: 25px!important;
+@media screen and (max-width:576px) {
+    .footer-heading h2 {
+        font-size: 25px !important;
         letter-spacing: 2px;
     }
-    
-}
 
+}
