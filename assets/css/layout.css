@@ -8,7 +8,7 @@ body {
     display: inline-block; }
 
 body {
-  overflow: scroll; }
+  overflow-x: hidden; }
 
 body::-webkit-scrollbar {
-  display: hidden; }
+  display: none; }
