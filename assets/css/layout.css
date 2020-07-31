@@ -11,4 +11,4 @@ body {
   overflow: scroll; }
 
 body::-webkit-scrollbar {
-  display: none; }
+  display: hidden; }
