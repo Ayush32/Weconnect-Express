@@ -1,13 +1,13 @@
 /*
- *   Copyright (c) 2020 
+ *   Copyright (c) 2020
  *   All rights reserved.
  */
-const express = require('express');
-const router  = express.Router();
-const homeController = require('../controllers/home_controller')
+const express = require("express");
+const router = express.Router();
+const homeController = require("../controllers/home_controller");
 
-router.get('/', homeController.home)
-router.use('/users', require('./users'))
+router.get("/", homeController.home);
+router.use("/users", require("./users"));
+router.use("/posts", require("./posts"));
 
-
-module.exports = router
+module.exports = router;
