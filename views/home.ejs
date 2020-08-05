@@ -16,8 +16,9 @@
   <div id="post-list-container">
     <ul>
       <% for (post of posts){ %>
+      <br />
       <li>
-        <%= post.content %>
+        <%= post.user.name %> <%= post.content %>
       </li>
       <% } %>
     </ul>
