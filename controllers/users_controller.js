@@ -9,9 +9,12 @@ const User = require("../models/user");
  *   Copyright (c) 2020
  *   All rights reserved.
  */
-module.exports.profile = function (rex, res) {
-  return res.render("user_profile", {
-    titleName: "User Profile",
+module.exports.profile = function (req, res) {
+  User.findById(req.params.id, function (err, user) {
+    return res.render("user_profile", {
+      titleName: "User Profile",
+      profile_user: user,
+    });
   });
 };
 
