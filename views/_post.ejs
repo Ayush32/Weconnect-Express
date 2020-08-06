@@ -27,9 +27,9 @@
         >
       </div>
     </div>
-    <%}%>
+    <% } %>
 
-    <h5 class="card-title"><%=post.user.name%></h5>
+    <h5 class="card-title"><%= post.user.name %></h5>
 
     <div class="card-text mt-2 mb-2">
       <small><%=post.user.updatedAt.toString().substr(0, 15)%></small>
@@ -40,7 +40,6 @@
 
     <div class="align-middle action-buttons">
       <!-- like button on post -->
-      <%if(locals.user){ %>
 
       <a
         data-toggle="collapse"
