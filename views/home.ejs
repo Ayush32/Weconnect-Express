@@ -28,19 +28,29 @@
     </div>
   </section>
 
-  <div id="all-users-container">
-    <h4>
-      All Users
-    </h4>
+  <section id="user-friends" class="col-sm-3 mt-4 pb-3 pt-3">
+    <div id="friends-container">
+      <h4>
+        Friends
+      </h4>
+    </div>
 
-    <ul class="list-group">
-      <%for(u of all_users){%>
-      <li
-        class="list-group-item d-flex justify-content-between align-items-center"
-      >
-        <a href="/users/profile/<%=u.id%>"><%=u.name%></a>
-      </li>
-      <%}%>
-    </ul>
-  </div>
+    <hr />
+
+    <div id="all-users-container">
+      <h4>
+        All Users
+      </h4>
+
+      <ul class="list-group">
+        <%for(u of locals.all_users){%>
+        <li
+          class="list-group-item d-flex justify-content-between align-items-center"
+        >
+          <a href="/users/profile/<%=u.id%>"><%=u.name%></a>
+        </li>
+        <%}%>
+      </ul>
+    </div>
+  </section>
 </div>
