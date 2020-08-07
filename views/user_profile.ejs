@@ -3,9 +3,9 @@
   Weconnect / Profile Page
 </h1>
 
-<% if(user.id == profile.user.id){ %>
+<% if(user.id == profile_user.id){ %>
 
-<form action="/users/update/<%= profile_user.id%>">
+<form action="/users/update/<%= profile_user.id%>" method="POST">
   <input
     type="text"
     name="name"
