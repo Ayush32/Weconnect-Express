@@ -6,7 +6,7 @@ const Post = require("../models/post");
 const User = require("../models/user");
 const Comment = require("../models/comment");
 
-module.exports.create = async function (req, res) {
+module.exports.create = function (req, res) {
   Post.findById(req.body.post, function (err, post) {
     if (post) {
       Comment.create(
