@@ -47,8 +47,7 @@ app.use(
     cookie: {
       maxAge: 1000 * 60 * 100,
     },
-    store: new MongoStore(
-      {
+    store: new MongoStore({
         mongooseConnection: db,
         autoRemove: "disabled",
       },
@@ -63,7 +62,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(passport.setAuthenticatedUser);
 
-app.use(flash);
+app.use(flash());
 app.use(customMware.setFlash);
 
 app.set("layout extractStyles", true);
