@@ -13,21 +13,23 @@ module.exports.home = async function (req, res) {
   //   });
   // });
 
-  let posts = await Post.find({})
-    .populate("user")
-    .populate({
-      path: "comments",
-      populate: {
-        path: "user",
-      },
-    });
-  let users = await User.find({});
+  try {
+    let posts = await Post.find({})
+      .populate("user")
+      .populate({
+        path: "comments",
+        populate: {
+          path: "user",
+        },
+      });
+    let users = await User.find({});
 
-  User.find({}, function (err, users) {
     return res.render("home", {
       titleName: "Socialbox | Home",
       posts: posts,
       all_users: users,
     });
-  });
+  } catch (err) {
+    console.log("Error", err);
+  }
 };
