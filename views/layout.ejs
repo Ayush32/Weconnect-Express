@@ -6,11 +6,7 @@
     <title>
       <%= titleName %>
     </title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css"></script>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
@@ -37,6 +33,12 @@
       crossorigin="anonymous"
     ></script>
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css"></script>
+
     <link rel="stylesheet" href="/css/layout.css" />
 
     <%- style %>
@@ -44,29 +46,29 @@
 
   <body>
     <%- include('_header'); %> <%- body %> <%- include('_footer'); %> <%- script
-    %>
+    -%>
 
     <script>
-      <% if (flash.success && flash.success.length > 0) { %>
-        new Noty({
-            theme: 'relax',
-            text: "<%= flash.success %>",
-            type: 'success',
-            layout: 'topRight',
-            timeout: 3000
+             <% if(flash.success && flash.success.length > 0){ %>
+              new Noty({
+                theme: 'metroui',
+                text: '<%= flash.success %>',
+                type: 'success',
+                layout: 'topRight',
+                timeout: 3000,
 
-          }).show()
-          <% } %>
-      <% if (flash.error && flash.error.length > 0) { %>
-        new Noty({
-            theme: 'relax',
-            text: "<%= flash.error %>",
-            type: 'error',
-            layout: 'topRight',
-            timeout: 3000
+      }).show();
+            <% } %>
 
-          }).show()
-          <%} %>
+             <% if(flash.error && flash.error.length > 0){ %>
+              new Noty({
+                theme: 'metroui',
+                text: '<%= flash.error %>',
+                type: 'error',
+                layout: 'topRight',
+                timeout: 3000
+      }).show();
+            <% } %>
     </script>
   </body>
 </html>
