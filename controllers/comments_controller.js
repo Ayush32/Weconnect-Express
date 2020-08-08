@@ -17,6 +17,8 @@ module.exports.create = async function (req, res) {
       });
       post.comments.push(comment);
       post.save();
+
+
       req.flash('success', 'New Comment Added')
       res.redirect("/");
     }
@@ -28,7 +30,7 @@ module.exports.create = async function (req, res) {
 
 module.exports.destroy = async function (req, res) {
   try {
-    let comment = awaitComment.findById(req.params.id);
+    let comment = await Comment.findById(req.params.id);
     if (comment.user == req.user.id) {
       let postId = comment.post;
       comment.remove();
@@ -39,6 +41,7 @@ module.exports.destroy = async function (req, res) {
             comments: req.params.id
           }
         });
+
       req.flash('success', 'Comment Deleted Successfully');
       return res.redirect('back')
     } else {
