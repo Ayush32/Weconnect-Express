@@ -34,6 +34,8 @@ app.use(express.urlencoded());
 app.use(cookieParser());
 
 app.use(express.static("./assets"));
+// make the uploads path avaliable
+app.use("/uploads", express.static(__dirname + "/uploads"));
 app.use(expressLayouts);
 
 // mongo store is used to store the session cookie in the db
