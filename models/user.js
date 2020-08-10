@@ -3,6 +3,7 @@
  *   All rights reserved.
  */
 const mongoose = require("mongoose");
+const multer = require("multer");
 
 const userSchema = new mongoose.Schema(
   {
